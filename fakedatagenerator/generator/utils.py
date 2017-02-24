@@ -38,7 +38,7 @@ def generate(n_predictors, n_data_points, file_name, task="regression", file_for
                     values = [round(random.random(),2) for i in range(length_of_header)]
                     datawriter.writerow(values)
             elif task == "classification":
-                for i in range(n_data_point):
+                for i in range(n_data_points):
                     values = [random.choice([0,1])]
                     values.extend([round(random.random(),2) for i in range(length_of_header-1)])
                     datawriter.writerow(values)
