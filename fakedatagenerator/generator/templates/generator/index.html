@@ -1,0 +1,22 @@
+{% load bootstrap3 %}
+{% bootstrap_css %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fake Data Generator</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Create fake datasets for your needs">
+    </head>
+    
+    <body class="text-center">
+        <h1>Fake Dataset Generator</h1>
+        <h3>Having difficulties finding a simple dataset for your data scientist needs?</h3>
+        <h3>Here, you can generate fake datasets for testing or learning purposes for free.</h3>
+        <form action="." method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>
